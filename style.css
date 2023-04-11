@@ -14,14 +14,13 @@
 body {
     background-color: #eee;
     height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
 }
 
 .image-sidebar {
+    flex: 2;
     position: relative;
-    width: 100vw;
-    height: 100vh;
     background-image: url(images/bg-image.avif);
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,31 +62,37 @@ body {
 }
 
 .main-content {
+    flex: 3;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    gap: 32px;
 }
 
-.main-content > div {
+.main-content > .text-section {
+    flex: 1;
     padding: 2em 4em;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .main-content div p {
     font-size: 1.4rem;
     font-weight: 700;
-}
-
-.main-content div p:first-child {
     margin-bottom: 1em;
 }
 
 .form-section {
+    flex: 3;
+}
+
+.form-section > div {
+    padding: 2em 4em 4em;
+}
+
+.form-section > .inputs-section {
     background-color: white;
-    height: calc(20% + 20vh);
-    padding: 2em 4em;
+    box-shadow: 0px 1px 1px;
 }
 
 .form-section h1 {
@@ -120,6 +125,11 @@ form input:focus {
     box-shadow: 1px 1px 1px;
 }
 
+form input:invalid {
+    border: 1px solid red;
+    box-shadow: 1px 1px 1px;
+}
+
 form label {
     font-family: "Space Mono", monospace;
     position: absolute;
@@ -135,6 +145,7 @@ form label {
     color: white;
     font-size: 1rem;
     margin-bottom: 16px;
+    cursor: pointer;
 }
 
 .log-in a {
