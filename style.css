@@ -50,7 +50,7 @@ body {
     bottom: 12px;
     left: 0;
     right: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .credits a {
@@ -85,7 +85,7 @@ body {
 
 .main-content > .form-section {
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
     z-index: 2;
     margin-bottom: 1em;
 }
@@ -120,7 +120,7 @@ form input:focus {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.error input{
+.error input, input:invalid {
     border: 1px solid red;
 }
 
